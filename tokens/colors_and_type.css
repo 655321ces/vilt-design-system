@@ -1,0 +1,206 @@
+/* ==========================================================================
+   VILT Group — Colors & Typography
+   Sourced from vilt-group.com (Brazilian PT homepage + about-us)
+   ========================================================================== */
+
+/* ----- Webfonts: Substituted with closest Google Fonts matches -----
+   The site uses a clean humanist sans-serif (very close to Poppins / Plus Jakarta Sans).
+   Headings and body share the same family with weight contrast.
+   FLAG: real font files were not extractable via fetch; substituted with Plus Jakarta Sans.
+   ------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* ---------- Brand palette ---------- */
+  /* VILT identity is built around a warm tangerine orange paired with a
+     vivid violet, on white. The orange dominates buttons, underlines and
+     callouts; the violet appears in section accents, gradients and the
+     logo's secondary glyph. */
+
+  /* Direct from logo SVGs: navy wordmark + magenta accent X.
+     The brand pairs a deep cool navy with a single hot pink/magenta pop. */
+
+  --vilt-magenta:       #E81464;   /* primary accent — the "X" in the logo */
+  --vilt-magenta-600:   #C8104F;   /* hover / pressed */
+  --vilt-magenta-300:   #F26A99;   /* tint */
+  --vilt-magenta-100:   #FCE0EB;   /* surface tint */
+
+  --vilt-navy:          #2C3848;   /* primary text + wordmark */
+  --vilt-navy-700:      #1E2733;   /* deeper navy / inverse surface */
+  --vilt-navy-400:      #5A6878;   /* secondary text */
+  --vilt-navy-100:      #E5E8ED;   /* surface tint */
+
+  --vilt-rose:          #FF4D87;
+
+  /* ---------- Neutrals ---------- */
+  --vilt-ink:           #1A1A1A;   /* near-black body text */
+  --vilt-graphite:      #2E2E33;   /* heading text */
+  --vilt-slate:         #5A5A63;   /* secondary text */
+  --vilt-silver:        #9A9AA3;   /* muted / placeholders */
+  --vilt-mist:          #D6D6DC;   /* dividers */
+  --vilt-fog:           #EFEFF2;   /* surface tint / cards */
+  --vilt-cloud:         #F7F7F9;   /* page tint */
+  --vilt-paper:         #FFFFFF;   /* page background */
+
+  /* ---------- Semantic foreground / background ---------- */
+  --bg:                 var(--vilt-paper);
+  --bg-alt:             var(--vilt-cloud);
+  --bg-tint:            var(--vilt-fog);
+  --bg-inverse:         var(--vilt-navy-700);
+
+  --fg:                 var(--vilt-navy);
+  --fg-1:               var(--vilt-navy);
+  --fg-2:               var(--vilt-navy-400);
+  --fg-3:               var(--vilt-silver);
+  --fg-on-color:        #FFFFFF;
+
+  --border:             var(--vilt-mist);
+  --border-strong:      #B8B8C0;
+
+  --accent:             var(--vilt-magenta);
+  --accent-hover:       var(--vilt-magenta-600);
+  --accent-soft:        var(--vilt-magenta-100);
+  --accent-2:           var(--vilt-navy);
+
+  --link:               var(--vilt-navy);
+  --link-hover:         var(--vilt-magenta);
+
+  /* ---------- Signature gradients ---------- */
+  --grad-magenta:       linear-gradient(135deg, #E81464 0%, #FF4D87 100%);
+  --grad-navy:          linear-gradient(135deg, #1E2733 0%, #2C3848 60%, #5A6878 100%);
+  --grad-mix:           linear-gradient(135deg, #2C3848 0%, #E81464 100%);
+  /* legacy aliases */
+  --grad-sunset:        var(--grad-mix);
+  --grad-violet:        var(--grad-navy);
+  --grad-warm:          var(--grad-magenta);
+
+  /* ---------- Typography ---------- */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-text: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* type scale — corporate, generous; matches vilt-group.com hero (~64px) */
+  --fs-hero:    clamp(48px, 6vw, 84px);
+  --fs-h1:      clamp(36px, 4.4vw, 56px);
+  --fs-h2:      clamp(28px, 3.2vw, 40px);
+  --fs-h3:      24px;
+  --fs-h4:      20px;
+  --fs-lg:      18px;
+  --fs-body:    16px;
+  --fs-sm:      14px;
+  --fs-xs:      12px;
+  --fs-eyebrow: 13px;
+
+  --lh-tight:   1.05;
+  --lh-snug:    1.2;
+  --lh-normal:  1.5;
+  --lh-loose:   1.7;
+
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-black:    800;
+
+  /* ---------- Spacing (8pt) ---------- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+  --sp-10: 128px;
+
+  /* ---------- Radii ---------- */
+  --r-sm:    4px;
+  --r-md:    8px;
+  --r-lg:    14px;
+  --r-xl:    24px;
+  --r-2xl:   32px;
+  --r-pill:  999px;
+
+  /* ---------- Shadow / elevation ----------
+     The site uses very soft, low-contrast elevation; mostly flat. */
+  --shadow-1: 0 1px 2px rgba(26, 26, 26, 0.04), 0 1px 3px rgba(26, 26, 26, 0.06);
+  --shadow-2: 0 4px 12px rgba(26, 26, 26, 0.06), 0 2px 4px rgba(26, 26, 26, 0.04);
+  --shadow-3: 0 12px 32px rgba(26, 26, 26, 0.10), 0 4px 8px rgba(26, 26, 26, 0.05);
+  --shadow-navy:    0 18px 40px -12px rgba(44, 56, 72, 0.35);
+  --shadow-magenta: 0 18px 40px -12px rgba(232, 20, 100, 0.45);
+  /* legacy aliases */
+  --shadow-violet: var(--shadow-navy);
+  --shadow-orange: var(--shadow-magenta);
+
+  /* ---------- Motion ---------- */
+  --ease-out:  cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast:    150ms;
+  --t-base:    250ms;
+  --t-slow:    420ms;
+
+  --container:  1200px;
+  --container-wide: 1320px;
+}
+
+/* =========================================================================
+   Element defaults
+   ========================================================================= */
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5em;
+  text-wrap: balance;
+}
+
+h1, .h1 { font-size: var(--fs-h1); line-height: var(--lh-tight);  font-weight: var(--fw-black); }
+h2, .h2 { font-size: var(--fs-h2); line-height: var(--lh-snug); }
+h3, .h3 { font-size: var(--fs-h3); line-height: var(--lh-snug); font-weight: var(--fw-semibold); }
+h4, .h4 { font-size: var(--fs-h4); line-height: var(--lh-snug); font-weight: var(--fw-semibold); }
+
+.hero, .display {
+  font-size: var(--fs-hero);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.035em;
+  font-weight: var(--fw-black);
+}
+
+p, .body  { font-size: var(--fs-body); line-height: var(--lh-loose); color: var(--fg-1); }
+.lead     { font-size: var(--fs-lg); line-height: var(--lh-normal); color: var(--fg-2); }
+small, .small { font-size: var(--fs-sm); color: var(--fg-2); }
+
+.eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color var(--t-fast) var(--ease-out);
+}
+a:hover { color: var(--link-hover); }
+
+code, kbd, pre {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+
+::selection { background: var(--vilt-magenta-100); color: var(--vilt-navy-700); }

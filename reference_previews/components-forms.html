@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:24px;background:var(--bg);display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .field{display:flex;flex-direction:column;gap:6px}
+  label{font-family:var(--font-sans);font-size:12px;font-weight:600;color:var(--fg-2);letter-spacing:.04em;text-transform:uppercase}
+  input,textarea,select{font-family:var(--font-sans);font-size:15px;padding:12px 14px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--fg);outline:0;transition:border-color 200ms,box-shadow 200ms}
+  input:focus,textarea:focus,select:focus{border-color:var(--vilt-magenta);box-shadow:0 0 0 3px rgba(232,20,100,.18)}
+  textarea{resize:none;min-height:60px}
+  .check{display:flex;align-items:center;gap:8px;font-family:var(--font-sans);font-size:13px;color:var(--fg-1)}
+  .check input{accent-color:var(--vilt-magenta)}
+</style></head>
+<body>
+  <div class="field"><label>Seu nome</label><input value="Maria Silva"></div>
+  <div class="field"><label>Seu e-mail</label><input value="maria@empresa.com"></div>
+  <div class="field" style="grid-column:1/-1"><label>Mensagem</label><textarea>Gostaria de saber mais sobre as soluções de IA.</textarea></div>
+  <div class="check" style="grid-column:1/-1"><input type="checkbox" checked> Concordo com a Política de privacidade</div>
+</body></html>
